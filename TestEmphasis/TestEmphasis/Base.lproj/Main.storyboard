@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="psm-Yx-lxi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="213"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="148" id="VEG-xF-DUd" customClass="IndexTCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="148"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VEG-xF-DUd" id="90g-fZ-RK2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPI-kh-WkY" customClass="BorderOptionalView">
+                                                    <rect key="frame" x="0.0" y="59" width="375" height="89"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRF-Q7-rrN">
+                                                            <rect key="frame" x="166" y="34" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.93067752039999996" blue="0.78042413899999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="QRF-Q7-rrN" firstAttribute="centerX" secondItem="cPI-kh-WkY" secondAttribute="centerX" id="40R-6f-kEM"/>
+                                                        <constraint firstItem="QRF-Q7-rrN" firstAttribute="centerY" secondItem="cPI-kh-WkY" secondAttribute="centerY" id="whH-Ul-awS"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cPI-kh-WkY" secondAttribute="bottom" id="7OQ-JV-rf9"/>
+                                                <constraint firstAttribute="trailing" secondItem="cPI-kh-WkY" secondAttribute="trailing" id="Gk3-Dj-Sx0"/>
+                                                <constraint firstItem="cPI-kh-WkY" firstAttribute="leading" secondItem="90g-fZ-RK2" secondAttribute="leading" id="bYc-3N-SwH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="cPI-kh-WkY" firstAttribute="top" secondItem="VEG-xF-DUd" secondAttribute="bottom" multiplier="0.4" id="D3m-cf-ovK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="borderOptionalView" destination="cPI-kh-WkY" id="fTp-Hw-tdQ"/>
+                                            <outlet property="titleLabel" destination="QRF-Q7-rrN" id="2bq-LE-Hy9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RI3-ZS-MUK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Znx-7M-8W5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="psm-Yx-lxi" secondAttribute="trailing" id="0Cd-zH-ZDL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="psm-Yx-lxi" secondAttribute="bottom" constant="434" id="9Ao-nS-mX4"/>
+                            <constraint firstItem="psm-Yx-lxi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9mB-T5-fMD"/>
+                            <constraint firstItem="psm-Yx-lxi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gZW-Pp-itg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="borderTableView" destination="psm-Yx-lxi" id="7yA-k4-u65"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.5" y="366.5"/>
+        </scene>
+    </scenes>
+</document>
